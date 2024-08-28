@@ -381,3 +381,7 @@ class TestHooks:
             _ = pytestconfig.hook.pytest_report_from_serializable(
                 config=pytestconfig, data=data
             )
+
+    @pytest.mark.parametrize("a", ["..["])
+    def test_boo(self, a):
+        assert 0
